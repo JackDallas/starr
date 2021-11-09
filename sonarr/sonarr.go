@@ -398,3 +398,19 @@ func (s *Sonarr) GetHistory(maxRecords int) (*History, error) {
 
 	return &history, nil
 }
+
+// MarkHistoryItemAsFailed marks the given history item as failed by id.
+func (s *Sonarr) MarkHistoryItemAsFailed(id int64) error {
+	if id < 1 {
+		return fmt.Errorf("invalid history ID: %d", id)
+	}
+
+	params := make(url.Values)
+
+	_, err := s.Post("v3/history/failed/"+strconv.FormatInt(id, starr.Base10), params, nil)
+	if err != nil {
+		return fmt.Errorf("api.Get(history/failed/): %w", err)
+	}
+
+	return nil
+}

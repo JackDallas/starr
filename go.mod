@@ -1,4 +1,4 @@
-module golift.io/starr
+module github.com/jackdallas/starr
 
 go 1.16
 

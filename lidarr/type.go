@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"golift.io/starr"
+	"github.com/jackdallas/starr"
 )
 
 // Lidarr contains all the methods to interact with a Lidarr server.

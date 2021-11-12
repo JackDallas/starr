@@ -1,6 +1,6 @@
 package starr
 
-//go:generate mockgen -destination=mocks/apier.go golift.io/starr APIer
+//go:generate mockgen -destination=mocks/apier.go github.com/jackdallas/starr APIer
 
 import (
 	"bytes"

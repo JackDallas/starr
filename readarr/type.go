@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"golift.io/starr"
+	"github.com/jackdallas/starr"
 )
 
 // Readarr contains all the methods to interact with a Readarr server.

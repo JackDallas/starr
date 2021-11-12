@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"golift.io/starr"
+	"github.com/jackdallas/starr"
 )
 
 // GetQueue returns the Sonarr Queue (processing, but not yet imported).

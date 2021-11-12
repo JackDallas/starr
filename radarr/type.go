@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"golift.io/starr"
+	"github.com/jackdallas/starr"
 )
 
 // Radarr contains all the methods to interact with a Radarr server.

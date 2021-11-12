@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"golift.io/starr"
+	"github.com/jackdallas/starr"
 )
 
 // GetSystemStatus returns system status.

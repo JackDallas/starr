@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"golift.io/starr"
+	"github.com/jackdallas/starr"
 )
 
 // GetTags returns all the tags.

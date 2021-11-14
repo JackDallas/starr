@@ -431,3 +431,19 @@ func (r *Radarr) SendCommand(cmd *CommandRequest) (*CommandResponse, error) {
 
 	return &output, nil
 }
+
+// MarkHistoryItemAsFailed marks the given history item as failed by id.
+func (r *Radarr) MarkHistoryItemAsFailed(id int64) error {
+	if id < 1 {
+		return fmt.Errorf("invalid history ID: %d", id)
+	}
+
+	params := make(url.Values)
+
+	_, err := r.Post("v3/history/failed/"+strconv.FormatInt(id, starr.Base10), params, nil)
+	if err != nil {
+		return fmt.Errorf("api.Get(history/failed/): %w", err)
+	}
+
+	return nil
+}
